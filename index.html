@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ramin's CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: repeating-linear-gradient(135deg, #e0eafc 0px, #e0eafc 40px, #cfdef3 40px, #cfdef3 80px);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .cv-wrapper {
+            display: flex;
+            max-width: 900px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            overflow: hidden;
+        }
+        .cv-sidebar {
+            background: linear-gradient(135deg, #4e8cff 60%, #6ed0fa 100%);
+            color: #fff;
+            width: 260px;
+            min-width: 220px;
+            padding: 36px 24px 36px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 0 12px rgba(78,140,255,0.08);
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 16px rgba(78,140,255,0.18);
+        }
+        .cv-sidebar h1 {
+            margin: 0 0 10px 0;
+            font-size: 2em;
+            letter-spacing: 1px;
+        }
+        .cv-sidebar .info {
+            font-size: 1.05em;
+            margin-bottom: 28px;
+            text-align: center;
+            line-height: 1.7;
+        }
+        .download-btn {
+            display: block;
+            margin: 24px auto 0 auto;
+            padding: 12px 32px;
+            background: #fff;
+            color: #4e8cff;
+            border: none;
+            border-radius: 24px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(78,140,255,0.12);
+            transition: background 0.2s, color 0.2s;
+            text-align: center;
+            text-decoration: none;
+        }
+        .download-btn:hover {
+            background: #4e8cff;
+            color: #fff;
+        }
+        .cv-main {
+            flex: 1;
+            padding: 36px 40px 36px 40px;
+        }
+        h2 {
+            color: #4e8cff;
+            margin-top: 30px;
+            margin-bottom: 14px;
+            font-size: 1.25em;
+            letter-spacing: 1px;
+            border-bottom: 1.5px solid #e0eafc;
+            padding-bottom: 4px;
+        }
+        .skills, .languages {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .skill-bar, .lang-bar {
+            background: #e6e6e6;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 18px;
+            margin-top: 4px;
+        }
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4e8cff 60%, #6ed0fa 100%);
+            border-radius: 8px 0 0 8px;
+        }
+        .lang-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffb347 60%, #ffcc80 100%);
+            border-radius: 8px 0 0 8px;
+        }
+        .lang-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1em;
+        }
+        .work {
+            background: #f6faff;
+            border-left: 4px solid #4e8cff;
+            padding: 14px 22px;
+            border-radius: 8px;
+            margin-bottom: 18px;
+            margin-top: 10px;
+            font-size: 1.08em;
+        }
+        @media (max-width: 900px) {
+            .cv-wrapper {
+                flex-direction: column;
+                max-width: 98vw;
+            }
+            .cv-sidebar {
+                width: 100%;
+                min-width: 0;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 24px 12px;
+            }
+            .cv-sidebar .info {
+                margin-bottom: 0;
+            }
+            .cv-main {
+                padding: 24px 12px;
+            }
+        }
+        @media (max-width: 600px) {
+            .cv-sidebar {
+                flex-direction: column;
+                align-items: center;
+                padding: 18px 4px;
+            }
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+            }
+            .cv-main {
+                padding: 12px 2vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-wrapper">
+        <div class="cv-sidebar">
+            <img src="IMG_0031.JPG" alt="Ramin's Profile Picture" class="profile-pic">
+            <h1>Ramin</h1>
+            <div class="info">
+                <span class="uni">🎓</span> Cihan University<br>
+                <span class="dept">🏅</span> Sport Department<br>
+                <span class="level">📚</span> Second Level
+            </div>
+            <a href="ramin-cv.pdf" download class="download-btn">⬇️ Download CV (PDF)</a>
+        </div>
+        <div class="cv-main">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div>
+                    <span>🖥️ PowerPoint</span>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                </div>
+                <div>
+                    <span>📊 Excel</span>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                </div>
+                <div>
+                    <span>📝 Word</span>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                </div>
+            </div>
+
+            <h2>Languages</h2>
+            <div class="languages">
+                <div>
+                    <div class="lang-label"><span>🇰🇼 Kurdish</span><span>Fluent</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 100%"></div></div>
+                </div>
+                <div>
+                    <div class="lang-label"><span>🇬🇧 English</span><span>Intermediate</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 50%"></div></div>
+                </div>
+                <div>
+                    <div class="lang-label"><span>🇸🇦 Arabic</span><span>Intermediate</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 50%"></div></div>
+                </div>
+            </div>
+
+            <h2>Work Experience</h2>
+            <div class="work">
+                <b>Car Wash Worker</b><br>
+                Worked in several car wash places, gaining experience in teamwork and customer service.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
